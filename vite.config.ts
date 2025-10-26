@@ -4,7 +4,6 @@
   import path from 'path';
 
   export default defineConfig({
-    base: '/5904sunwukongwebsite/',
     plugins: [react()],
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],

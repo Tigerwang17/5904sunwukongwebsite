@@ -78,9 +78,7 @@ export function DataDownload() {
                     角色信息數據包含描述原文及角色類型等多種信息。
                   </p>
                   <p className="text-[#8b7355] leading-relaxed">
-                    This database contains various works related to Sun Wukong, including films, TV series, novels, animations, and other media formats.
-                    The database includes detailed information such as Chinese and English titles, release year, medium type, era background, and regional information.
-                    Currently contains 81+ works, spanning from 688 CE to 2020, with 8+ data fields.
+                    This database catalogs various works related to Sun Wukong, along with corresponding character descriptions, including films, TV series, novels, animations, and other media formats. It contains detailed information such as Chinese and English titles, release year, medium type, historical era, and regional information. The work table currently includes 81 works, spanning from the 5th century BCE to the present. Character table includes original descriptive texts and character type classifications, among other information.
                   </p>
                 </div>
 
@@ -105,10 +103,7 @@ export function DataDownload() {
 
                 {/* Additional Info */}
                 <div className="mt-6 pt-6 border-t border-[#8b7355]/30">
-                  <p className="text-sm text-[#8b7355]">
-                    * 歡迎訪問GitHub獲取最新版本<br />
-                    * Please visit GitHub for the latest version
-                  </p>
+
                 </div>
               </div>
             </div>

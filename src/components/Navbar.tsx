@@ -48,8 +48,8 @@ export function Navbar() {
         >
           <div className="text-[#b8860b] text-2xl">🐵</div>
           <div>
-            <div className="text-[#b8860b]">孫悟空演化研究</div>
-            <div className="text-xs text-[#8b7355]">Sun Wukong Digital Humanities</div>
+            <div className="text-[#b8860b]">孫悟空形象历史演化研究</div>
+            <div className="text-xs text-[#8b7355]">The Historical Evolution of the Image of Sun Wukong</div>
           </div>
         </motion.div>
 
