@@ -20,10 +20,10 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '18'
-        cache: 'npm'
+        # 移除这一行：cache: 'npm'
         
     - name: Install dependencies
-      run: npm install
+      run: npm install --no-package-lock  # 添加 --no-package-lock
       
     - name: Build project
       run: npm run build
@@ -36,14 +36,8 @@ jobs:
         echo "=== build 文件夹内容 ==="
         ls -la build/ || echo "build 文件夹不存在"
         echo ""
-        echo "=== 详细文件列表 ==="
-        find build/ -type f | sort || echo "找不到build文件夹"
-        echo ""
         echo "=== index.html 内容 ==="
         cat build/index.html || echo "无法读取 index.html"
-        echo ""
-        echo "=== 检查assets文件夹 ==="
-        ls -la build/assets/ 2>/dev/null || echo "assets文件夹不存在"
       
     - name: Setup Pages
       uses: actions/configure-pages@v4
