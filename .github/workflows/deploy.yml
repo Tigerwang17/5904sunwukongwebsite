@@ -28,13 +28,30 @@ jobs:
     - name: Build project
       run: npm run build
       
+    - name: Debug build output
+      run: |
+        echo "=== 检查项目结构 ==="
+        ls -la
+        echo ""
+        echo "=== build 文件夹内容 ==="
+        ls -la build/ || echo "build 文件夹不存在"
+        echo ""
+        echo "=== 详细文件列表 ==="
+        find build/ -type f | sort || echo "找不到build文件夹"
+        echo ""
+        echo "=== index.html 内容 ==="
+        cat build/index.html || echo "无法读取 index.html"
+        echo ""
+        echo "=== 检查assets文件夹 ==="
+        ls -la build/assets/ 2>/dev/null || echo "assets文件夹不存在"
+      
     - name: Setup Pages
       uses: actions/configure-pages@v4
       
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
       with:
-        path: ./build  # 重要：这里用 build，不是 dist！
+        path: ./build
         
     - name: Deploy to GitHub Pages
       id: deployment
